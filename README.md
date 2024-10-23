@@ -81,7 +81,7 @@ graph TD;
 - Advanced Visualizations: Adding more intuitive graphs and charts to visualize insights.
 - Extended Web Scraping: Expanding the scraping capabilities to include additional product categories and features.
 ## 💬 Contact Information
-For any questions or collaborations, feel free to reach out:
+For any questions or collaborations, feel free to reach out: <br>
 Name: Dat Nguyen <br>
 Email: ngvdat.w@gmail.com <br>
 LinkedIn: https://www.linkedin.com/in/nguyen-dat-399305247/
