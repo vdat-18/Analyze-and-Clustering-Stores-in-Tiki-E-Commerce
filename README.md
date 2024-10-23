@@ -1,68 +1,91 @@
-# Tiki Data Analysis and Web Scraping
+# 📊 Tiki.vn Data Analysis & Web Scraping Project
 
-## Project Overview
+![Tiki Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Tiki_VN_Logo.svg/512px-Tiki_VN_Logo.svg.png)
 
-This project focuses on analyzing data from Tiki.vn, an e-commerce platform, to gain insights into various stores and their performance. Additionally, web scraping techniques are used to gather data from Tiki for further analysis. The project is divided into three main sections:
+## 🔍 **Project Overview**
+This project focuses on data analysis and web scraping of Tiki.vn, a major e-commerce platform in Vietnam. It involves:
+- Preprocessing and cleaning data for analysis.
+- Applying machine learning models for clustering Tiki stores.
+- Scraping real estate data from Tiki.vn for deeper insights.
 
-1. **Data Preprocessing**: Prepares and cleans data for analysis and clustering.
-2. **Modeling and Analysis**: Applies machine learning algorithms for clustering and data insights.
-3. **Web Scraping**: Scrapes data from Tiki.vn to collect store information for analysis.
+---
 
-## File Descriptions
+## 📂 **File Structure**
+
+| File Name                     | Description                                                                 |
+|-------------------------------|-----------------------------------------------------------------------------|
+| `Data Preprocessing (Tiki).ipynb` | Prepares and cleans the Tiki dataset, handles missing values, and creates new features for clustering. |
+| `Model and Analysis (Tiki).ipynb` | Implements clustering algorithms like Birch, K-Means, and K-Prototypes, along with feature selection. |
+| `Model_and_Analysis_(Tiki)_1.ipynb` | An improved version of the model notebook, adding hyperparameter tuning, X-DBSCAN, and noise removal. |
+| `scrape_tiki.ipynb`            | Web scraping real estate data from Tiki.vn, including address, price, and area details. |
+
+---
+
+## 🚀 **Key Features**
 
 ### 1. `Data Preprocessing (Tiki).ipynb`
-This notebook is responsible for the preprocessing of Tiki data. It includes steps for cleaning the data, handling missing values, and preparing the features for clustering and further analysis. The following key steps are included:
-- **Feature Engineering**: Creation of new features for analysis.
-- **Data Standardization**: Standardizing continuous variables for clustering algorithms.
-- **Frequent Itemset Mining**: Identifying patterns to create binary features for further use.
-
+- **Data Cleaning**: Handles missing values and standardizes continuous features.
+- **Feature Engineering**: Generates new binary features from frequent itemsets.
+- **Standardization**: Prepares continuous variables for machine learning models.
+  
 ### 2. `Model and Analysis (Tiki).ipynb`
-This notebook applies various machine learning models to analyze the preprocessed Tiki data. The notebook includes:
-- **Clustering Algorithms**: Usage of models like Birch, K-Means, and K-Prototypes to cluster stores based on their features.
-- **Feature Selection**: Forward selection method is used to select the best binary features for clustering.
-- **Evaluation**: Evaluation of different clustering models based on silhouette scores, Davies-Bouldin Index, etc.
+- **Clustering Algorithms**: Birch, K-Means, and K-Prototypes applied to segment stores.
+- **Feature Selection**: Forward selection of binary features for optimal clustering.
+- **Evaluation Metrics**: Silhouette scores, Davies-Bouldin Index, and other performance indicators.
 
 ### 3. `Model_and_Analysis_(Tiki)_1.ipynb`
-A continuation or revised version of the `Model and Analysis (Tiki).ipynb`, this notebook includes further improvements to the clustering analysis. The notable changes include:
-- **Hyperparameter Tuning**: Fine-tuning of clustering models for optimal results.
-- **X-DBSCAN**: Experimentation with X-DBSCAN to handle noise and outliers in the data before applying K-Means.
-- **Noise Removal**: Handling noisy data to improve the clustering performance.
+- **X-DBSCAN**: Handles noise in the data for better clustering results.
+- **Noise Removal**: Removes outliers before applying K-Means for improved performance.
+- **Hyperparameter Tuning**: Optimizes clustering models for better segmentation.
 
 ### 4. `scrape_tiki.ipynb`
-This notebook is used for scraping real estate data from Tiki.vn, focusing on gathering relevant information about stores and products. Key details scraped include:
-- **Address, Price, Area, Bedrooms, Bathrooms**: Collecting data for real estate analysis.
-- **Automation**: The script is designed to scrape multiple pages (up to page 300) automatically.
-- **Data Storage**: The scraped data is stored in pandas DataFrames for easy analysis and visualization.
+- **Web Scraping**: Automates scraping of real estate listings, capturing vital details such as address, price, bedrooms, and area.
+- **Multi-page Scraping**: Efficiently scrapes data from up to 300 pages, gathering comprehensive insights.
+- **Data Storage**: Collected data is stored in a structured pandas DataFrame for easy analysis.
 
-## How to Run
+---
 
-1. Clone this repository:
-    ```bash
-    git clone <repo_link>
-    ```
-2. Install necessary dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
-3. Run the Jupyter notebooks in the following order:
-    1. `Data Preprocessing (Tiki).ipynb`
-    2. `Model and Analysis (Tiki).ipynb` or `Model_and_Analysis_(Tiki)_1.ipynb` (improved version)
-    3. `scrape_tiki.ipynb`
+## ⚙️ **How to Use**
 
-## Project Requirements
+1. **Clone the repository**:
+```bash
+git clone <repository_link>
+```
+Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+Run the notebooks:
+- Start with Data Preprocessing (Tiki).ipynb.
+- Move on to the analysis notebooks (Model and Analysis (Tiki).ipynb or Model_and_Analysis_(Tiki)_1.ipynb).
+- Finally, run scrape_tiki.ipynb for data scraping.
+## 📊 Project Flow
+```bash 
+graph TD;
+    A[Data Preprocessing] --> B[Clustering Models]
+    B --> C[Birch & K-Means]
+    C --> D[X-DBSCAN & Noise Removal]
+    D --> E[Final Clusters]
+    A --> F[Web Scraping]
+    F --> G[Data Collection]
+    G --> H[Data Analysis]
+```
+## 🛠 Technologies Used
+- Python 3.x: The core programming language used.
+- Pandas: For data manipulation and analysis.
+- Scikit-learn: Applied for machine learning models and clustering.
+- BeautifulSoup: Used for web scraping.
+- Jupyter Notebooks: For interactive analysis and visualization.
+## 📈 Future Work
+- Model Optimization: Further tuning and experimentation with clustering algorithms.
+- Advanced Visualizations: Adding more intuitive graphs and charts to visualize insights.
+- Extended Web Scraping: Expanding the scraping capabilities to include additional product categories and features.
+## 💬 Contact Information
+For any questions or collaborations, feel free to reach out:
+Name: Dat Nguyen <br>
+Email: ngvdat.w@gmail.com <br>
+LinkedIn: https://www.linkedin.com/in/nguyen-dat-399305247/
 
-- Python 3.x
-- Jupyter Notebook
-- Pandas
-- Scikit-learn
-- BeautifulSoup (for web scraping)
-
-## Future Work
-
-- **Model Improvement**: Further tuning of clustering algorithms.
-- **Additional Data Scraping**: Expanding the scope of web scraping to include more product categories.
-- **Visualization**: Adding more advanced visualizations for store performance analysis.
-
-## Contact
-
-For any inquiries or collaboration, please contact [Your Name] at [your email].
+Name: Your Name
+Email: your.email@example.com
+LinkedIn: Your LinkedIn
