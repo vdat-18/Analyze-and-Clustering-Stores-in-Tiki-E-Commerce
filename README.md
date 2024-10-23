@@ -85,7 +85,3 @@ For any questions or collaborations, feel free to reach out: <br>
 Name: Dat Nguyen <br>
 Email: ngvdat.w@gmail.com <br>
 LinkedIn: https://www.linkedin.com/in/nguyen-dat-399305247/
-
-Name: Your Name
-Email: your.email@example.com
-LinkedIn: Your LinkedIn
